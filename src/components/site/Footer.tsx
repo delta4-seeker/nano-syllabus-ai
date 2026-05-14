@@ -13,7 +13,7 @@ export function Footer() {
               <span className="font-display text-xl">nano syllabus</span>
             </div>
             <p className="mt-4 max-w-sm text-sm text-muted-foreground">
-              An AI co-pilot for self-study — built around Nepal's curriculum, syllabus,
+              An AI co-pilot for self-study, built around Nepal's curriculum, syllabus,
               question banks, and teacher notes.
             </p>
           </div>

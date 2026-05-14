@@ -9,9 +9,9 @@ import productTeacher from "@/assets/product-teacher.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Nano Syllabus — Your AI study companion for Nepal" },
+      { title: "Nano Syllabus · Your AI study companion for Nepal" },
       { name: "description", content: "An AI co-pilot built around Nepal's curriculum, syllabus, question banks, and teacher notes. Learn faster, prepare smarter." },
-      { property: "og:title", content: "Nano Syllabus — AI study companion" },
+      { property: "og:title", content: "Nano Syllabus · AI study companion" },
       { property: "og:description", content: "Curriculum-aware AI for students across Nepal." },
     ],
   }),
@@ -36,7 +36,7 @@ function Home() {
             </h1>
             <p className="mt-6 max-w-lg text-pretty text-base text-muted-foreground md:text-lg">
               Nano Syllabus is an AI co-pilot that understands your textbooks, syllabus,
-              and question banks — so studying actually feels doable.
+              and question banks, so studying actually feels doable.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <a
@@ -108,10 +108,10 @@ function Home() {
         </div>
         <div className="mt-12 grid gap-px overflow-hidden rounded-3xl border border-border bg-border md:grid-cols-3">
           {[
-            { icon: BookOpen, title: "Built on NEB & SEE", body: "Trained on Nepal's official textbooks and chapter-wise notes — answers stay relevant to your exam." },
+            { icon: BookOpen, title: "Built on NEB & SEE", body: "Trained on Nepal's official textbooks and chapter-wise notes. Answers stay relevant to your exam." },
             { icon: GraduationCap, title: "Past papers, solved", body: "10 years of question banks with step-by-step explanations in English and Nepali." },
             { icon: Bot, title: "Always on, always patient", body: "Ask the same doubt 10 times. Your AI tutor never gets tired and never judges." },
-            { icon: Sparkles, title: "Smart revision", body: "Personalised flashcards, summaries, and quizzes — built from what you actually struggle with." },
+            { icon: Sparkles, title: "Smart revision", body: "Personalised flashcards, summaries, and quizzes, built from what you actually struggle with." },
             { icon: CheckCircle2, title: "Teacher-reviewed", body: "Notes co-created with top teachers across Kathmandu, Pokhara and Biratnagar." },
             { icon: Star, title: "Free to start", body: "Begin with the free plan. Upgrade only when you're ready for entrance prep." },
           ].map(({ icon: Icon, title, body }) => (
@@ -138,9 +138,9 @@ function Home() {
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {[
-              { img: productStudy, tag: "01 — Study", title: "Study Companion", body: "Your daily co-pilot for class 6–12. Ask, summarise, revise." },
-              { img: productEntrance, tag: "02 — Entrance", title: "Entrance Preparation", body: "Targeted practice for IOE, CEE, KU and Loksewa." },
-              { img: productTeacher, tag: "03 — Teacher", title: "Teacher AI Clone", body: "Learn from an AI that mirrors your favourite teacher's notes." },
+              { img: productStudy, tag: "01 · Study", title: "Study Companion", body: "Your daily co-pilot for class 6 to 12. Ask, summarise, revise." },
+              { img: productEntrance, tag: "02 · Entrance", title: "Entrance Preparation", body: "Targeted practice for IOE, CEE, KU and Loksewa." },
+              { img: productTeacher, tag: "03 · Teacher", title: "Teacher AI Clone", body: "Learn from an AI that mirrors your favourite teacher's notes." },
             ].map((p) => (
               <article key={p.title} className="group overflow-hidden rounded-3xl border border-border bg-card transition-shadow hover:shadow-xl">
                 <div className="aspect-[4/3] overflow-hidden bg-muted">
@@ -168,7 +168,7 @@ function Home() {
               <blockquote className="font-display text-2xl leading-snug md:text-3xl">
                 "{t.quote}"
               </blockquote>
-              <figcaption className="mt-6 text-sm text-muted-foreground">— {t.who}</figcaption>
+              <figcaption className="mt-6 text-sm text-muted-foreground">{t.who}</figcaption>
             </figure>
           ))}
         </div>
