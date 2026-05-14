@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Layout } from "@/components/site/Layout";
+import { PageHero } from "@/components/site/PageHero";
 import { ArrowRight } from "lucide-react";
 import productStudy from "@/assets/product-study.jpg";
 import productEntrance from "@/assets/product-entrance.jpg";
@@ -8,8 +9,8 @@ import productTeacher from "@/assets/product-teacher.jpg";
 export const Route = createFileRoute("/products")({
   head: () => ({
     meta: [
-      { title: "Products — Nano Syllabus" },
-      { name: "description", content: "Study Companion, Entrance Preparation, and Teacher AI Clone — Nano Syllabus' product ecosystem." },
+      { title: "Products · Nano Syllabus" },
+      { name: "description", content: "Study Companion, Entrance Preparation, and Teacher AI Clone. The Nano Syllabus product ecosystem." },
       { property: "og:title", content: "Nano Syllabus Products" },
       { property: "og:description", content: "Three products built for students of Nepal." },
     ],
@@ -20,21 +21,21 @@ export const Route = createFileRoute("/products")({
 const products = [
   {
     img: productStudy,
-    tag: "01 — Study",
+    tag: "01 · Study",
     title: "Study Companion",
-    body: "Daily co-pilot for class 6–12. Chapter-wise summaries, doubt solving in Nepali & English, and adaptive quizzes from your textbook.",
+    body: "Daily co-pilot for class 6 to 12. Chapter-wise summaries, doubt solving in Nepali & English, and adaptive quizzes from your textbook.",
     points: ["Chapter-wise notes", "Doubt solver in Nepali", "Smart flashcards", "Progress tracking"],
   },
   {
     img: productEntrance,
-    tag: "02 — Entrance",
+    tag: "02 · Entrance",
     title: "Entrance Preparation",
-    body: "Focused mock tests and analytics for IOE, CEE, KU and Loksewa — based on the last 10 years of papers.",
+    body: "Focused mock tests and analytics for IOE, CEE, KU and Loksewa, based on the last 10 years of papers.",
     points: ["10 yrs of past papers", "Adaptive mock tests", "Weakness analytics", "Topper strategies"],
   },
   {
     img: productTeacher,
-    tag: "03 — Teacher",
+    tag: "03 · Teacher",
     title: "Teacher AI Clone",
     body: "An AI that learns from a teacher's notes and explains the way they would. Built with Nepal's top educators.",
     points: ["Teacher-style explanations", "Voice notes", "Personal study plan", "1:1 feel, anytime"],
@@ -44,14 +45,11 @@ const products = [
 function ProductsPage() {
   return (
     <Layout>
-      <section className="container-px mx-auto max-w-7xl py-20 md:py-28">
-        <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">Products</p>
-        <h1 className="mt-3 text-5xl md:text-7xl">An ecosystem for learning.</h1>
-        <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-          Nano Syllabus is starting with three products — each designed to solve a real
-          problem for students and educators in Nepal.
-        </p>
-      </section>
+      <PageHero
+        eyebrow="Products"
+        title="An ecosystem for learning."
+        subtitle="Nano Syllabus is starting with three products, each designed to solve a real problem for students and educators in Nepal."
+      />
 
       <section className="container-px mx-auto max-w-7xl pb-24">
         <div className="space-y-6">
