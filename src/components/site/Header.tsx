@@ -28,7 +28,7 @@ export function Header() {
               key={n.to}
               to={n.to}
               className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-              activeProps={{ className: "text-foreground" }}
+              activeProps={{ className: "text-foreground font-bold underline underline-offset-8 decoration-2" }}
               activeOptions={{ exact: n.to === "/" }}
             >
               {n.label}
@@ -56,7 +56,7 @@ export function Header() {
                 to={n.to}
                 onClick={() => setOpen(false)}
                 className="rounded-md px-3 py-2 text-sm text-muted-foreground hover:bg-muted hover:text-foreground"
-                activeProps={{ className: "text-foreground bg-muted" }}
+                activeProps={{ className: "text-foreground bg-muted font-bold underline underline-offset-4" }}
                 activeOptions={{ exact: n.to === "/" }}
               >
                 {n.label}
