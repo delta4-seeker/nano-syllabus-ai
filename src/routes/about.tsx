@@ -1,11 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Layout } from "@/components/site/Layout";
+import { PageHero } from "@/components/site/PageHero";
 import aboutImg from "@/assets/about-students.jpg";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — Nano Syllabus" },
+      { title: "About · Nano Syllabus" },
       { name: "description", content: "We're making education in Nepal easy, accessible, and joyful." },
       { property: "og:title", content: "About Nano Syllabus" },
       { property: "og:description", content: "Our mission, story and team." },
@@ -17,19 +18,13 @@ export const Route = createFileRoute("/about")({
 function AboutPage() {
   return (
     <Layout>
-      <section className="container-px mx-auto max-w-7xl py-20 md:py-28">
-        <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">About</p>
-        <h1 className="mt-3 max-w-4xl text-balance text-5xl md:text-7xl">
-          Education in Nepal, made <em className="font-display italic text-muted-foreground">easy</em> and accessible.
-        </h1>
-        <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-          Nano Syllabus exists because every student in Nepal — from Jhapa to Jumla —
-          deserves a brilliant tutor in their pocket. We're building an AI ecosystem
-          that meets students where they are.
-        </p>
-      </section>
+      <PageHero
+        eyebrow="About"
+        title={<>Education in Nepal, made <em className="italic text-muted-foreground">easy</em> and accessible.</>}
+        subtitle={<>Nano Syllabus exists because every student in Nepal, from Jhapa to Jumla, deserves a brilliant tutor in their pocket. We're building an AI ecosystem that meets students where they are.</>}
+      />
 
-      <section className="container-px mx-auto max-w-7xl pb-24">
+      <section className="container-px mx-auto max-w-7xl py-24">
         <div className="overflow-hidden rounded-3xl border border-border">
           <img src={aboutImg} alt="Nepali students" loading="lazy" className="h-auto w-full object-cover" />
         </div>

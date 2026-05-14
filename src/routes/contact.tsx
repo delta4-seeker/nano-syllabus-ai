@@ -1,12 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Layout } from "@/components/site/Layout";
+import { PageHero } from "@/components/site/PageHero";
 import { Mail, MapPin, Phone, ArrowRight } from "lucide-react";
 import { useState } from "react";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Nano Syllabus" },
+      { title: "Contact · Nano Syllabus" },
       { name: "description", content: "Talk to the Nano Syllabus team. Book a demo or ask us anything." },
       { property: "og:title", content: "Contact Nano Syllabus" },
       { property: "og:description", content: "We'd love to hear from you." },
@@ -19,13 +20,11 @@ function ContactPage() {
   const [sent, setSent] = useState(false);
   return (
     <Layout>
-      <section className="container-px mx-auto max-w-7xl py-20 md:py-28">
-        <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">Contact</p>
-        <h1 className="mt-3 text-5xl md:text-7xl">Let's talk.</h1>
-        <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-          Whether you're a student, parent, or teacher — we'd love to hear from you.
-        </p>
-      </section>
+      <PageHero
+        eyebrow="Contact"
+        title="Let's talk."
+        subtitle="Whether you're a student, parent, or teacher, we'd love to hear from you."
+      />
 
       <section className="container-px mx-auto max-w-7xl pb-24">
         <div className="grid gap-10 md:grid-cols-5">
@@ -67,7 +66,7 @@ function ContactPage() {
             <button type="submit" className="mt-6 inline-flex items-center gap-2 rounded-full bg-foreground px-5 py-3 text-sm text-background hover:opacity-90">
               Send message <ArrowRight className="h-4 w-4" />
             </button>
-            {sent && <p className="mt-4 text-sm text-primary">Thanks — we'll get back within a day.</p>}
+            {sent && <p className="mt-4 text-sm text-primary">Thanks, we'll get back within a day.</p>}
           </form>
         </div>
       </section>
