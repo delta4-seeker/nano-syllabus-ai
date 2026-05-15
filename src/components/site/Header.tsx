@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { mainNav, siteConfig } from "@/lib/site";
+import Image from "next/image";
 
 export function Header() {
   const pathname = usePathname();
@@ -22,9 +23,13 @@ export function Header() {
           href="/"
           className="flex items-center gap-2 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
         >
-          <div className="grid h-7 w-7 place-items-center rounded-md bg-foreground text-background">
-            <span className="font-display text-base leading-none">n</span>
-          </div>
+            <Image
+            src="/nanosyllabus_logo.png"
+            alt={siteConfig.shortName}
+            width={28}
+            height={28}
+            className="object-contain"
+            />
           <span className="font-display text-xl tracking-tight">{siteConfig.shortName}</span>
         </Link>
         <nav className="hidden items-center gap-8 md:flex">
