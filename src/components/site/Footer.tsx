@@ -1,4 +1,5 @@
-import { Link } from "@tanstack/react-router";
+import Link from "next/link";
+import { siteConfig } from "@/lib/site";
 
 export function Footer() {
   return (
@@ -10,28 +11,65 @@ export function Footer() {
               <div className="grid h-7 w-7 place-items-center rounded-md bg-foreground text-background">
                 <span className="font-display text-base leading-none">n</span>
               </div>
-              <span className="font-display text-xl">nano syllabus</span>
+              <span className="font-display text-xl">{siteConfig.shortName}</span>
             </div>
-            <p className="mt-4 max-w-sm text-sm text-muted-foreground">
-              An AI co-pilot for self-study, built around Nepal's curriculum, syllabus,
-              question banks, and teacher notes.
-            </p>
+            <p className="mt-4 max-w-sm text-sm text-muted-foreground">{siteConfig.description}</p>
           </div>
           <div>
             <h4 className="text-sm font-medium">Explore</h4>
             <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-              <li><Link to="/products" className="hover:text-foreground">Products</Link></li>
-              <li><Link to="/features" className="hover:text-foreground">Features</Link></li>
-              <li><Link to="/blogs" className="hover:text-foreground">Blogs</Link></li>
-              <li><Link to="/about" className="hover:text-foreground">About</Link></li>
+              <li>
+                <Link
+                  href="/products"
+                  className="rounded-sm transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                >
+                  Products
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/features"
+                  className="rounded-sm transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                >
+                  Features
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/blogs"
+                  className="rounded-sm transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                >
+                  Blogs
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/about"
+                  className="rounded-sm transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                >
+                  About
+                </Link>
+              </li>
             </ul>
           </div>
           <div>
             <h4 className="text-sm font-medium">Get started</h4>
             <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-              <li><Link to="/contact" className="hover:text-foreground">Contact</Link></li>
               <li>
-                <a href="https://calendly.com/nanosyllabus/demo" target="_blank" rel="noreferrer" className="hover:text-foreground">
+                <Link
+                  href="/contact"
+                  className="rounded-sm transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                >
+                  Contact
+                </Link>
+              </li>
+              <li>
+                <a
+                  href={siteConfig.demoUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rounded-sm transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                >
                   Book a demo
                 </a>
               </li>
@@ -39,8 +77,10 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-12 flex flex-col items-start justify-between gap-2 border-t border-border pt-6 text-xs text-muted-foreground md:flex-row md:items-center">
-          <p>© {new Date().getFullYear()} Nano Syllabus. Made for students of Nepal.</p>
-          <p>Kathmandu, Nepal</p>
+          <p>
+            © {new Date().getFullYear()} {siteConfig.name}. Made for students of Nepal.
+          </p>
+          <p>{siteConfig.location}</p>
         </div>
       </div>
     </footer>
