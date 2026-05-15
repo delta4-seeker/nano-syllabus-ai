@@ -1,7 +1,7 @@
 import type { StaticImageData } from "next/image";
 import aboutStudents from "@/assets/about-students.jpg";
 import blogCover from "@/assets/blog-cover-1.jpg";
-import heroStudent from "@/assets/hero-student.jpg";
+import heroStudent from "@/assets/hero-student.png";
 import productEntrance from "@/assets/product-entrance.jpg";
 import productStudy from "@/assets/product-study.jpg";
 import productTeacher from "@/assets/product-teacher.jpg";

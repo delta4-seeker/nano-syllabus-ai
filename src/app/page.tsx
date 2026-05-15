@@ -9,7 +9,7 @@ import {
   Sparkles,
   Star,
 } from "lucide-react";
-import heroImg from "@/assets/hero-student.jpg";
+import heroImg from "@/assets/hero-student.png";
 import productEntrance from "@/assets/product-entrance.jpg";
 import productStudy from "@/assets/product-study.jpg";
 import productTeacher from "@/assets/product-teacher.jpg";
