@@ -1,5 +1,5 @@
 import Image from "next/image";
-import aboutImg from "@/assets/about-students.jpg";
+import aboutImg from "@/assets/about-students.png";
 import { PageHero } from "@/components/site/PageHero";
 import { createPageMetadata } from "@/lib/site";
 
