@@ -34,14 +34,51 @@ export async function generateMetadata({ params }: Props) {
   });
 }
 
+function toIsoDate(dateStr: string): string {
+  return new Date(dateStr).toISOString().split("T")[0];
+}
+
 export default async function BlogDetailPage({ params }: Props) {
   const { slug } = await params;
   const post = getBlogPost(slug);
 
   if (!post) notFound();
 
+  const isoDate = toIsoDate(post.date);
+  const blogSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.excerpt,
+    datePublished: isoDate,
+    dateModified: isoDate,
+    author: {
+      "@type": "Organization",
+      name: "Nano Syllabus",
+      url: "https://nanosyllabus.com",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Nano Syllabus",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://nanosyllabus.com/nanosyllabus_logo.png",
+      },
+    },
+    url: `https://nanosyllabus.com/blogs/${post.slug}`,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://nanosyllabus.com/blogs/${post.slug}`,
+    },
+  };
+
   return (
-    <article className="container-px mx-auto max-w-7xl py-16 md:py-24">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
+      />
+      <article className="container-px mx-auto max-w-7xl py-16 md:py-24">
       <Link
         href="/blogs"
         className="inline-flex min-h-10 items-center gap-2 rounded-full border border-border px-4 py-2 text-sm text-muted-foreground transition-colors hover:bg-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
@@ -111,5 +148,6 @@ export default async function BlogDetailPage({ params }: Props) {
         </aside>
       </div>
     </article>
+    </>
   );
 }

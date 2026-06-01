@@ -22,9 +22,34 @@ export const metadata = createPageMetadata({
   path: "/",
 });
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Nano Syllabus",
+  url: "https://nanosyllabus.com",
+  logo: "https://nanosyllabus.com/nanosyllabus_logo.png",
+  description:
+    "An AI co-pilot built around Nepal's curriculum, syllabus, question banks, and teacher notes.",
+  contactPoint: {
+    "@type": "ContactPoint",
+    email: "hello@nanosyllabus.com",
+    telephone: "+977-9800000000",
+    contactType: "customer service",
+  },
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Kathmandu",
+    addressCountry: "NP",
+  },
+};
+
 export default function HomePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 -z-10 grid-bg opacity-60" />
         <div className="container-px mx-auto grid max-w-7xl items-center gap-12 py-20 md:grid-cols-2 md:py-28">

@@ -74,7 +74,7 @@ export default function FeaturesPage() {
           {features.map(({ icon: Icon, title, body }) => (
             <div key={title} className="bg-background p-8">
               <Icon className="h-6 w-6 text-primary" />
-              <h3 className="mt-6 text-xl">{title}</h3>
+              <h2 className="mt-6 text-xl">{title}</h2>
               <p className="mt-2 text-sm text-muted-foreground">{body}</p>
             </div>
           ))}

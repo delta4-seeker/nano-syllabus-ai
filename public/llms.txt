@@ -1,0 +1,45 @@
+# Nano Syllabus
+
+Nano Syllabus is an AI co-pilot built around Nepal's curriculum, syllabus,
+question banks, and teacher notes. Students preparing for SEE, NEB, IOE,
+CEE, and Loksewa exams can ask doubts, revise chapters, and practise with
+past papers — in English or Nepali.
+
+## Who It's For
+Students in Nepal preparing for:
+- SEE (Class 10)
+- NEB +2 (Class 11 and 12)
+- IOE entrance exam
+- CEE entrance exam
+- Loksewa
+Also used by teachers who want to build AI-powered study aids from their own notes.
+
+## Key Capabilities
+- Chapter-wise doubt solving in English and Nepali
+- 10+ years of solved past papers for IOE, CEE, SEE, and NEB
+- Adaptive quizzes that adjust to each learner's weak spots
+- AI-built study planner tailored to an exam date
+- Teacher AI Clone: an AI modelled on a specific teacher's style and notes
+- Smart summaries: turn 30 pages into a 2-minute revision card
+- Auto-generated flashcards from weak spots
+- Progress analytics showing which topics need more work
+- Voice mode: talk to your tutor on the way to school
+
+## Products
+- Study Companion: daily co-pilot for Class 6–12 (chapter notes, doubt solving, flashcards, progress tracking)
+- Entrance Preparation: mock tests and analytics for IOE, CEE, KU, and Loksewa based on 10 years of papers
+- Teacher AI Clone: personalised AI built from a teacher's own notes and voice
+
+## Key Pages
+- Homepage: [https://nanosyllabus.com]
+- Products: [https://nanosyllabus.com/products]
+- Features: [https://nanosyllabus.com/features]
+- Blog: [https://nanosyllabus.com/blogs]
+- Contact: [https://nanosyllabus.com/contact]
+- Pricing (machine-readable): [https://nanosyllabus.com/pricing.md]
+
+## Contact
+- General: hello@nanosyllabus.com
+- Phone: +977 9800000000
+- Location: Kathmandu, Nepal
+- Book a demo: https://calendly.com/nanosyllabus/demo
