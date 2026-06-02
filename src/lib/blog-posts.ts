@@ -31,6 +31,180 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "see-exam-preparation-guide",
+    cover: heroStudent,
+    tag: "SEE Guide",
+    date: "June 1, 2026",
+    title: "How to Score 3.8+ in SEE 2026: The AI-Powered Study Guide",
+    metaDescription:
+      "A proven 12-week study plan for SEE 2026 that helps Class 10 students in Nepal score 3.8 GPA and above — diagnosis, targeted practice, mock sprints, and AI-powered revision with Nano Syllabus.",
+    excerpt:
+      "A proven 12-week system for Class 10 students targeting Grade A in SEE — from diagnosing your gaps to walking into the exam confident.",
+    intro:
+      "Every year, thousands of Class 10 students across Nepal sit the SEE exam wondering the same thing: am I actually ready? The honest answer, for most students, is no — not because they have not studied, but because they have been studying the wrong way. This guide gives you a smarter path, built around the habits of students who have already scored 3.8 and above.",
+    sections: [
+      {
+        heading: "Why the Traditional Approach Fails",
+        paragraphs: [
+          "Nepal's SEE curriculum is wide. Science, Maths, Nepali, English, Social Studies, Optional subjects — each demands a different strategy. The average student tries to cover everything equally, which means nothing gets covered deeply.",
+          "The students who score 3.8 and above do something different. They identify their weak chapters early. They drill past paper patterns. They review actively, not passively.",
+        ],
+      },
+      {
+        heading: "Phase 1 — Diagnose Your Gaps First (Weeks 1–2)",
+        paragraphs: [
+          "Before you open a textbook, find your gaps. Take one past paper under timed conditions for each subject. Mark every question you got wrong or guessed. Group your errors by chapter — for example, Quadratic Equations in Maths or Respiration in Science.",
+          "This gives you a personalised weak-spot list. With Nano Syllabus, ask the AI to quiz you on any chapter. It knows Nepal's SEE syllabus chapter by chapter and will surface the exact question types that appear in NEB papers.",
+        ],
+      },
+      {
+        heading: "Phase 2 — Targeted Practice by Subject (Weeks 3–10)",
+        paragraphs: [
+          "Work through subjects in order of your gap size, starting with your weakest. For Maths, prioritise Algebra, Geometry, Statistics, and Trigonometry — these account for over 60% of marks. Solve at least 3 past paper questions per chapter before moving on and never skip working; many marks come from method, not just final answers.",
+          "For Science, use diagrams. Labelling the heart, eye, and nitrogen cycle takes 10 minutes to practise and frequently appears for 4–6 marks. For English, practise reading comprehension timed and review grammar rules — tenses, modal verbs, prepositions — because these appear in every paper.",
+        ],
+      },
+      {
+        heading: "Phase 3 — Mock Exam Sprints (Weeks 11–12)",
+        paragraphs: [
+          "Two weeks before SEE, shift into exam simulation mode. Sit one full mock paper per subject under strict conditions — no phone, timer running, answers written in order.",
+          "After each mock, review every wrong answer the same day. This builds exam-day stamina and trains your brain to retrieve knowledge under pressure rather than only in comfortable study sessions.",
+        ],
+      },
+      {
+        heading: "The 5 Study Habits That Separate 3.8+ Students",
+        paragraphs: [
+          "Study in blocks, not marathons — 45 minutes on, 10 minutes off. Write before you read: try to answer a question from memory first, then check the textbook. Retrieval beats re-reading every time. Use active recall daily through flashcards, self-quizzing, or explaining a concept out loud.",
+          "Treat past papers as primary, not supplementary: NEB reuses question formats, and if you have seen a format five times you will recognise it on exam day. Ask when you do not understand — immediately. Letting confusion sit for a week means carrying it for a week.",
+        ],
+      },
+      {
+        heading: "How Nano Syllabus Helps You Prepare",
+        paragraphs: [
+          "Nano Syllabus is not a replacement for studying — it is an upgrade to how you study. Use it to get instant explanations for anything you do not understand in your NEB textbooks, solve past paper questions with step-by-step walkthroughs, and generate personalised flashcards from topics you keep getting wrong.",
+          "The AI adapts to your language preference — Nepali or English — and gives examples from your actual textbook. It never gets impatient when you ask the same question ten different ways. Start free at nanosyllabus.com.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "What GPA is needed to score 3.8 in SEE?",
+        answer:
+          "A GPA of 3.8 in SEE corresponds to a Grade A in Nepal's grading system, typically requiring an average score of around 75–80% across all subjects in the NEB assessment.",
+      },
+      {
+        question: "How many months of preparation is enough for SEE?",
+        answer:
+          "Three months of structured preparation is enough for most students. The key is starting with a diagnostic phase, not with random reading. Two to three months of targeted practice followed by two weeks of mock exams covers the full plan.",
+      },
+      {
+        question: "Which subjects are hardest in SEE 2026?",
+        answer:
+          "Most students find Maths and Science the most challenging because they require both conceptual understanding and accurate calculation. Consistent past paper practice and chapter-by-chapter gap analysis reduce difficulty significantly.",
+      },
+      {
+        question: "Can AI help with SEE preparation in Nepal?",
+        answer:
+          "Yes. Nano Syllabus is an AI study tool built specifically for Nepal's NEB curriculum. It explains chapters in Nepali or English, generates practice questions from past papers, and helps students identify and fix weak spots before exam day.",
+      },
+    ],
+  },
+  {
+    slug: "ioe-entrance-exam-preparation",
+    cover: productEntrance,
+    tag: "IOE Guide",
+    date: "June 1, 2026",
+    title: "IOE Entrance Exam 2026: The Complete 90-Day Preparation Blueprint",
+    metaDescription:
+      "A complete 90-day IOE entrance exam preparation plan for Nepal engineering aspirants — covering Physics, Maths, Chemistry, and English with month-by-month strategy, common mistakes to avoid, and AI-powered practice with Nano Syllabus.",
+    excerpt:
+      "The 90-day plan that separates students who clear IOE from those who don't — built around the three subjects that decide your rank.",
+    intro:
+      "The IOE entrance exam is one of Nepal's most competitive — roughly 1 in 4 applicants clears it for engineering programmes at Pulchowk and affiliated campuses. The gap between those who clear and those who don't is not intelligence. It is strategy. This is the 90-day plan that works.",
+    sections: [
+      {
+        heading: "Understanding What IOE Actually Tests",
+        paragraphs: [
+          "IOE entrance covers Physics (25 questions, 35 marks), Chemistry (25 questions, 35 marks), Mathematics (25 questions, 35 marks), and English (25 questions, 20 marks) — 125 marks total. Pass mark varies by year but typically sits around 40–45%.",
+          "The key insight: Physics and Maths carry the most marks and are the most discriminating subjects. Students who score well here almost always clear. Students who neglect them almost never do.",
+        ],
+        table: {
+          headers: ["Subject", "Questions", "Marks"],
+          rows: [
+            ["Physics", "25", "35"],
+            ["Chemistry", "25", "35"],
+            ["Mathematics", "25", "35"],
+            ["English", "25", "20"],
+          ],
+        },
+      },
+      {
+        heading: "Month 1 — Build Your Foundation",
+        paragraphs: [
+          "Start by taking one past IOE paper without preparation. Time yourself and score it honestly. This tells you your baseline and, more importantly, which chapters are bleeding marks. Then work through high-weight chapters first — for Physics: Mechanics, Electricity and magnetism, and Waves and optics. For Maths: Limits and derivatives, Integration, Coordinate geometry, and Vectors.",
+          "For each chapter, follow the same loop — read notes, solve 10 practice questions, check answers, and understand every wrong one before moving forward. For Chemistry, focus on Equilibrium and thermodynamics, Organic chemistry, and Electrochemistry.",
+        ],
+      },
+      {
+        heading: "Month 2 — Pattern Recognition Through Past Papers",
+        paragraphs: [
+          "IOE reuses question formats relentlessly. A student who has seen 200 IOE questions recognises patterns before they finish reading new ones. Solve the full 10-year past paper bank (2014–2024) and track which chapters appear most often, which question types you consistently get right, and which ones you consistently get wrong.",
+          "Dedicate one full week to your two worst chapters. Fixing a consistently-wrong chapter is worth 3–4 extra marks on exam day — this is the highest-leverage week in the entire plan.",
+        ],
+      },
+      {
+        heading: "Month 3 — Build Exam Speed",
+        paragraphs: [
+          "IOE gives you 120 minutes for 100 questions — 72 seconds per question. Students who have not practised timed conditions routinely run out of time on questions they know the answers to.",
+          "Sit three full mock papers per week under strict exam conditions: 120-minute timer, no phone, no notes. Target: by Week 11, consistently scoring above 55% on mocks. Stop heavy practice three days before the exam and review key formulas and definitions only — nothing new.",
+        ],
+      },
+      {
+        heading: "Physics: The Subject That Decides Your Rank",
+        paragraphs: [
+          "Physics carries 35 marks and is where most engineering aspirants either pull ahead or fall behind. The students who ace Physics share three habits. They derive rather than memorise — understanding where a formula comes from means they can reconstruct it under pressure. They draw diagrams for every problem, even when the question does not ask for one. And they know the trick questions cold.",
+          "IOE loves edge cases: what happens to acceleration when mass doubles, which direction does current flow in a given circuit. If you have seen that pattern five times, it takes five seconds on exam day. If you have not, it takes five minutes you cannot afford.",
+        ],
+      },
+      {
+        heading: "The Common Mistakes That Kill IOE Scores",
+        paragraphs: [
+          "Starting too late: students who clear IOE on their first attempt typically start three to four months out. Starting three weeks before is almost never enough. Ignoring English: it is 20 marks and most students can score 14–16 here with two focused weeks on grammar and comprehension — do not leave easy marks behind.",
+          "Practising without reviewing: solving past papers without analysing your mistakes teaches nothing. Every wrong answer is a lesson, so do not skip the review. Over-studying comfort subjects: time spent on weak subjects yields four times the return of grinding topics you already know well.",
+        ],
+      },
+      {
+        heading: "How to Use Nano Syllabus for IOE Prep",
+        paragraphs: [
+          "Nano Syllabus's entrance preparation product is built specifically for IOE, CEE, KU, and Loksewa aspirants. Use it to get step-by-step walkthroughs for any IOE past paper question, quiz yourself on any chapter until it is locked in, and ask follow-up questions when the first explanation does not click.",
+          "The AI knows 10 years of IOE question banks. Try asking: give me 5 questions on circular motion from past IOE papers. It also practises with you in English — the language IOE exams are written in — so your answers are precise under pressure. Start free at nanosyllabus.com.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "How hard is the IOE entrance exam in Nepal?",
+        answer:
+          "IOE entrance is one of Nepal's most competitive engineering exams. Roughly 1 in 4 applicants clears it each year. The exam tests Physics, Chemistry, Maths, and English across 100 questions in 120 minutes.",
+      },
+      {
+        question: "How many months should I prepare for IOE entrance?",
+        answer:
+          "Three months of structured preparation is the standard for first-attempt success. The plan should include one month of chapter mastery, one month of past paper pattern recognition, and one month of timed mock exams.",
+      },
+      {
+        question: "Which subject is most important for IOE entrance?",
+        answer:
+          "Physics and Maths together account for 70 marks out of 125 and are the most discriminating subjects. Students who score well in both almost always clear. Chemistry and English cover the remaining 55 marks and should not be neglected.",
+      },
+      {
+        question: "Can I use AI to prepare for IOE entrance exam?",
+        answer:
+          "Yes. Nano Syllabus is built for IOE, CEE, and other Nepal entrance exams. It provides step-by-step solutions for past paper questions, chapter-by-chapter quizzes, and explanations in both Nepali and English to help you prepare efficiently.",
+      },
+    ],
+  },
+  {
     slug: "crack-ioe-entrance-in-90-days",
     cover: productEntrance,
     tag: "Guide",
