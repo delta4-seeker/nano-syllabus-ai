@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: Props) {
 
   return createPageMetadata({
     title: post.title,
-    description: post.excerpt,
+    description: post.metaDescription ?? post.excerpt,
     path: `/blogs/${post.slug}`,
   });
 }
@@ -45,11 +45,12 @@ export default async function BlogDetailPage({ params }: Props) {
   if (!post) notFound();
 
   const isoDate = toIsoDate(post.date);
+
   const blogSchema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: post.title,
-    description: post.excerpt,
+    description: post.metaDescription ?? post.excerpt,
     datePublished: isoDate,
     dateModified: isoDate,
     author: {
@@ -72,12 +73,33 @@ export default async function BlogDetailPage({ params }: Props) {
     },
   };
 
+  const faqSchema = post.faqs && post.faqs.length > 0
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: post.faqs.map((faq) => ({
+          "@type": "Question",
+          name: faq.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: faq.answer,
+          },
+        })),
+      }
+    : null;
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
       />
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
       <article className="container-px mx-auto max-w-7xl py-16 md:py-24">
       <Link
         href="/blogs"
@@ -111,14 +133,67 @@ export default async function BlogDetailPage({ params }: Props) {
           <div className="mt-12 max-w-3xl space-y-12">
             {post.sections.map((section) => (
               <section key={section.heading}>
-                <h2 className="text-2xl md:text-3xl">{section.heading}</h2>
-                <div className="mt-4 space-y-4 text-base leading-7 text-muted-foreground">
-                  {section.paragraphs.map((paragraph) => (
-                    <p key={paragraph}>{paragraph}</p>
+                {section.heading && (
+                  <h2 className="text-2xl md:text-3xl">{section.heading}</h2>
+                )}
+                {section.table && (
+                  <div className="mt-4 overflow-x-auto">
+                    <table className="w-full border-collapse text-sm">
+                      <thead>
+                        <tr className="border-b border-border">
+                          {section.table.headers.map((header) => (
+                            <th
+                              key={header}
+                              className="py-3 pr-4 text-left font-medium text-foreground"
+                            >
+                              {header}
+                            </th>
+                          ))}
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {section.table.rows.map((row, rowIdx) => (
+                          <tr
+                            key={rowIdx}
+                            className="border-b border-border last:border-0"
+                          >
+                            {row.map((cell, cellIdx) => (
+                              <td
+                                key={cellIdx}
+                                className={`py-3 pr-4 text-muted-foreground ${cellIdx === 0 ? "font-medium text-foreground" : ""}`}
+                              >
+                                {cell}
+                              </td>
+                            ))}
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                )}
+                {section.paragraphs.length > 0 && (
+                  <div className="mt-4 space-y-4 text-base leading-7 text-muted-foreground">
+                    {section.paragraphs.map((paragraph) => (
+                      <p key={paragraph}>{paragraph}</p>
+                    ))}
+                  </div>
+                )}
+              </section>
+            ))}
+
+            {post.faqs && post.faqs.length > 0 && (
+              <section>
+                <h2 className="text-2xl md:text-3xl">Frequently Asked Questions</h2>
+                <div className="mt-6 space-y-6">
+                  {post.faqs.map((faq) => (
+                    <div key={faq.question} className="rounded-2xl border border-border bg-card p-6">
+                      <h3 className="text-base font-medium text-foreground">{faq.question}</h3>
+                      <p className="mt-2 text-sm leading-7 text-muted-foreground">{faq.answer}</p>
+                    </div>
                   ))}
                 </div>
               </section>
-            ))}
+            )}
           </div>
         </div>
 
