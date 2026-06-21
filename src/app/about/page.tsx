@@ -5,7 +5,8 @@ import { createPageMetadata } from "@/lib/site";
 
 export const metadata = createPageMetadata({
   title: "About",
-  description: "We're making education in Nepal easy, accessible, and joyful.",
+  description:
+    "Nano Syllabus makes academic learning fast, so students reclaim time for their careers and deeper mastery. Now piloting with universities in Nepal.",
   path: "/about",
 });
 
@@ -16,15 +17,17 @@ export default function AboutPage() {
         eyebrow="About"
         title={
           <>
-            Education in Nepal, made <em className="italic text-muted-foreground">easy</em> and
-            accessible.
+            Clear academics fast, so you can{" "}
+            <em className="italic text-muted-foreground">grow</em>.
           </>
         }
         subtitle={
           <>
-            Nano Syllabus exists because every student in Nepal, from Jhapa to Jumla, deserves a
-            brilliant tutor in their pocket. We&apos;re building an AI ecosystem that meets students
-            where they are.
+            Students lose the time they need for their careers to coursework that never ends. Nano
+            Syllabus flips that: an AI study companion that learns your exact syllabus and exam
+            pattern, so you clear academics faster and spend your time building your career and
+            mastering ideas more deeply. We&apos;re starting with a pilot across universities in
+            Nepal, and building for students everywhere.
           </>
         }
       />
@@ -33,7 +36,7 @@ export default function AboutPage() {
         <div className="overflow-hidden rounded-3xl border border-border">
           <Image
             src={aboutImg}
-            alt="Nepali students learning together"
+            alt="Students learning with Nano Syllabus"
             sizes="100vw"
             className="h-auto w-full object-cover"
           />
@@ -45,20 +48,22 @@ export default function AboutPage() {
           <div>
             <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">Mission</p>
             <p className="mt-3 font-display text-2xl">
-              Make world-class study support free or affordable for every Nepali student.
+              Make academic learning so fast that every student gets time back for their career and
+              deeper understanding.
             </p>
           </div>
           <div>
             <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">Vision</p>
             <p className="mt-3 font-display text-2xl">
-              A future where geography and income no longer decide who learns well.
+              A world where staying on top of your course never costs you the time to build your
+              future.
             </p>
           </div>
           <div>
             <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">How</p>
             <p className="mt-3 font-display text-2xl">
-              By blending Nepal&apos;s curriculum with AI that&apos;s patient, accurate, and
-              friendly.
+              By binding AI to your exact syllabus, past papers, and exam pattern, so it is accurate,
+              patient, and always on-course.
             </p>
           </div>
         </div>
@@ -67,10 +72,10 @@ export default function AboutPage() {
       <section className="container-px mx-auto max-w-7xl pb-24">
         <div className="grid gap-6 rounded-3xl border border-border bg-card p-10 md:grid-cols-4">
           {[
-            { n: "10k+", l: "Active students" },
-            { n: "75", l: "Districts reached" },
-            { n: "120+", l: "Teacher contributors" },
-            { n: "4.9★", l: "Average rating" },
+            { n: "Pilot", l: "Live with Nepal universities" },
+            { n: "Any", l: "Syllabus, any university" },
+            { n: "On-course", l: "Answers stay on your exam" },
+            { n: "Built", l: "For students everywhere" },
           ].map((stat) => (
             <div key={stat.l}>
               <p className="font-display text-5xl">{stat.n}</p>

@@ -7,7 +7,7 @@ import { createPageMetadata } from "@/lib/site";
 
 export const metadata = createPageMetadata({
   title: "Blogs",
-  description: "Study tips, exam guides, and stories from students across Nepal.",
+  description: "Study tips, exam guides, and stories to help you clear coursework faster.",
   path: "/blogs",
 });
 
@@ -17,7 +17,7 @@ export default function BlogsPage() {
       <PageHero
         eyebrow="Blogs"
         title="Notes from the team."
-        subtitle="Study tips, exam strategies, and stories from students across Nepal."
+        subtitle="Study tips, exam strategies, and stories to help you study smarter."
       />
 
       <section className="container-px mx-auto max-w-7xl py-24">

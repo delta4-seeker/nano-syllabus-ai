@@ -24,11 +24,11 @@ export function Header() {
           className="flex items-center gap-2 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
         >
             <Image
-            src="/nanosyllabus_logo.png"
-            alt={siteConfig.shortName}
-            width={28}
-            height={28}
-            className="object-contain"
+            src="/nanosyllabus-logo.png"
+            alt={siteConfig.name}
+            width={60}
+            height={60}
+            className="h-[60px] w-[60px] object-contain"
             />
           <span className="font-display text-xl tracking-tight">{siteConfig.shortName}</span>
         </Link>

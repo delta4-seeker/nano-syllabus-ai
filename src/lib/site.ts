@@ -3,13 +3,18 @@ import type { Metadata } from "next";
 export const siteConfig = {
   name: "Nano Syllabus",
   shortName: "nano syllabus",
+  tagline: "The AI study companion that actually knows your syllabus.",
   description:
-    "An AI co-pilot built around Nepal's curriculum, syllabus, question banks, and teacher notes.",
+    "Nano Syllabus is an AI study companion that learns your exact curriculum, past papers, and exam pattern, so you clear coursework faster and spend your time building your career and mastering ideas more deeply. Now piloting with universities in Nepal.",
+  pilotNote: "Now piloting with universities in Nepal.",
   url: "https://nanosyllabus.com",
   demoUrl: "https://calendly.com/nanosyllabus/demo",
   email: "hello@nanosyllabus.com",
-  phone: "+977 9800000000",
-  location: "Kathmandu, Nepal",
+  // Operated by TeraBitt LLC (Wyoming, United States) — legal entity + address only
+  legalEntity: "TeraBitt LLC",
+  phone: "+1 (307) 443-6488",
+  phoneHref: "tel:+13074436488",
+  location: "30 N Gould St, Ste R, Sheridan, WY 82801, USA",
 };
 
 export const mainNav = [

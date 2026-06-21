@@ -18,7 +18,7 @@ import { createPageMetadata } from "@/lib/site";
 export const metadata = createPageMetadata({
   title: "Features",
   description:
-    "Curriculum-aware AI, doubt solving in Nepali, past papers, smart revision, and more.",
+    "Curriculum-aware AI, doubt solving in your language, past papers, smart revision, and more.",
   path: "/features",
 });
 
@@ -26,11 +26,11 @@ const features = [
   {
     icon: BookOpen,
     title: "Curriculum-aware",
-    body: "Built on NEB, SEE, and CDC textbooks chapter-by-chapter.",
+    body: "Built on your official curriculum and textbooks, chapter by chapter.",
   },
   {
     icon: Languages,
-    title: "Nepali + English",
+    title: "Your language + English",
     body: "Switch languages mid-conversation. Learn however you think.",
   },
   {
@@ -46,7 +46,7 @@ const features = [
   {
     icon: GraduationCap,
     title: "Past papers",
-    body: "Solved papers for SEE, +2, IOE, CEE, and Loksewa.",
+    body: "Solved papers for your board, entrance, and licensing exams.",
   },
   { icon: Wand2, title: "Smart summaries", body: "Turn 30 pages into a 2-minute revision card." },
   { icon: Target, title: "Adaptive quizzes", body: "Quizzes that get harder as you get better." },
@@ -67,7 +67,7 @@ export default function FeaturesPage() {
       <PageHero
         eyebrow="Features"
         title="Everything you need to learn well."
-        subtitle="A focused set of tools, designed around how students in Nepal actually study."
+        subtitle="A focused set of tools, designed around how students actually study."
       />
       <section className="container-px mx-auto max-w-7xl py-24">
         <div className="grid gap-px overflow-hidden rounded-3xl border border-border bg-border md:grid-cols-3">

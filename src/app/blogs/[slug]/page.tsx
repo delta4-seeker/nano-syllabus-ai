@@ -201,8 +201,8 @@ export default async function BlogDetailPage({ params }: Props) {
           <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">Study with us</p>
           <h2 className="mt-3 text-2xl">Turn reading into revision.</h2>
           <p className="mt-3 text-sm text-muted-foreground">
-            Ask follow-up questions, generate flashcards, and practice with a curriculum-aware tutor
-            built for Nepal.
+            Ask follow-up questions, generate flashcards, and practice with a tutor that knows your
+            syllabus.
           </p>
           <div className="mt-6 flex flex-col gap-3">
             <a

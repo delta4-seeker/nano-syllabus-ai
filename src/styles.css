@@ -102,4 +102,59 @@
   .text-balance {
     text-wrap: balance;
   }
+  /* minimal vibrant accents */
+  .glow {
+    position: absolute;
+    border-radius: 9999px;
+    filter: blur(90px);
+    opacity: 0.5;
+    pointer-events: none;
+    z-index: -1;
+  }
+  .glow-blue {
+    background: radial-gradient(circle, oklch(0.62 0.19 258 / 0.55), transparent 70%);
+  }
+  .glow-sky {
+    background: radial-gradient(circle, oklch(0.78 0.13 230 / 0.5), transparent 70%);
+  }
+  .glow-indigo {
+    background: radial-gradient(circle, oklch(0.55 0.2 280 / 0.45), transparent 70%);
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .floaty {
+      animation: floaty 9s ease-in-out infinite;
+    }
+    .floaty-slow {
+      animation: floaty 13s ease-in-out infinite;
+    }
+  }
+  @keyframes floaty {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-16px);
+    }
+  }
+  /* scroll-driven reveal (progressive enhancement) */
+  @media (prefers-reduced-motion: no-preference) {
+    @supports (animation-timeline: view()) {
+      .reveal-up {
+        animation: reveal-up linear both;
+        animation-timeline: view();
+        animation-range: entry 0% entry 50%;
+      }
+    }
+  }
+  @keyframes reveal-up {
+    from {
+      opacity: 0;
+      transform: translateY(34px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
 }

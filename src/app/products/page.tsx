@@ -19,10 +19,10 @@ const products = [
     img: productStudy,
     tag: "01 · Study",
     title: "Study Companion",
-    body: "Daily co-pilot for class 6 to 12. Chapter-wise summaries, doubt solving in Nepali and English, and adaptive quizzes from your textbook.",
+    body: "Your daily co-pilot from school to university. Chapter-wise summaries, doubt solving in your language and English, and adaptive quizzes from your own textbook.",
     points: [
       "Chapter-wise notes",
-      "Doubt solver in Nepali",
+      "Doubt solver in your language",
       "Smart flashcards",
       "Progress tracking",
     ],
@@ -31,7 +31,7 @@ const products = [
     img: productEntrance,
     tag: "02 · Entrance",
     title: "Entrance Preparation",
-    body: "Focused mock tests and analytics for IOE, CEE, KU, and Loksewa, based on the last 10 years of papers.",
+    body: "Focused mock tests and analytics for your entrance and licensing exams, modelled on your exam pattern and past papers.",
     points: [
       "10 yrs of past papers",
       "Adaptive mock tests",
@@ -43,7 +43,7 @@ const products = [
     img: productTeacher,
     tag: "03 · Teacher",
     title: "Teacher AI Clone",
-    body: "An AI that learns from a teacher's notes and explains the way they would. Built with Nepal's top educators.",
+    body: "An AI that learns from a teacher's notes and explains the way they would. Built with experienced educators.",
     points: [
       "Teacher-style explanations",
       "Voice notes",
@@ -59,7 +59,7 @@ export default function ProductsPage() {
       <PageHero
         eyebrow="Products"
         title="An ecosystem for learning."
-        subtitle="Nano Syllabus is starting with three products, each designed to solve a real problem for students and educators in Nepal."
+        subtitle="Nano Syllabus is starting with three products, each designed to solve a real problem for students and educators. Currently piloting with universities in Nepal."
       />
 
       <section className="container-px mx-auto max-w-7xl pb-24">

@@ -48,7 +48,7 @@ export default function ContactPage() {
               <li className="flex items-start gap-3">
                 <Phone className="mt-0.5 h-4 w-4 text-primary" />
                 <a
-                  href="tel:+9779800000000"
+                  href={siteConfig.phoneHref}
                   className="transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                 >
                   {siteConfig.phone}

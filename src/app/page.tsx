@@ -18,7 +18,7 @@ import { createPageMetadata, siteConfig } from "@/lib/site";
 export const metadata = createPageMetadata({
   title: siteConfig.name,
   description:
-    "An AI co-pilot built around Nepal's curriculum, syllabus, question banks, and teacher notes. Learn faster and prepare smarter.",
+    "Nano Syllabus is an AI study companion that learns your exact syllabus, past papers, and exam pattern, for any university. Clear coursework faster and spend your time building your career and mastering ideas more deeply.",
   path: "/",
 });
 
@@ -27,19 +27,22 @@ const organizationSchema = {
   "@type": "Organization",
   name: "Nano Syllabus",
   url: "https://nanosyllabus.com",
-  logo: "https://nanosyllabus.com/nanosyllabus_logo.png",
+  logo: "https://nanosyllabus.com/nanosyllabus-logo.png",
   description:
-    "An AI co-pilot built around Nepal's curriculum, syllabus, question banks, and teacher notes.",
+    "An AI study companion that learns your exact syllabus, past papers, and exam pattern. Now piloting with universities in Nepal.",
   contactPoint: {
     "@type": "ContactPoint",
     email: "hello@nanosyllabus.com",
-    telephone: "+977-9800000000",
+    telephone: "+1-307-443-6488",
     contactType: "customer service",
   },
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Kathmandu",
-    addressCountry: "NP",
+    streetAddress: "30 N Gould St, Ste R",
+    addressLocality: "Sheridan",
+    addressRegion: "WY",
+    postalCode: "82801",
+    addressCountry: "US",
   },
 };
 
@@ -52,20 +55,23 @@ export default function HomePage() {
       />
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 -z-10 grid-bg opacity-60" />
+        <div className="glow glow-blue floaty-slow absolute -left-32 -top-24 h-[28rem] w-[28rem]" />
+        <div className="glow glow-sky floaty absolute right-[-7rem] top-44 h-[22rem] w-[22rem]" />
         <div className="container-px mx-auto grid max-w-7xl items-center gap-12 py-20 md:grid-cols-2 md:py-28">
           <div>
             <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1 text-xs text-muted-foreground">
               <Sparkles className="h-3.5 w-3.5 text-primary" />
-              Built for Nepal&apos;s curriculum
+              {siteConfig.pilotNote}
             </div>
             <h1 className="mt-6 text-balance text-5xl leading-[1.05] md:text-7xl">
-              Your pocket-sized
+              Master your syllabus.
               <br />
-              <span className="italic text-muted-foreground">study companion.</span>
+              <span className="italic text-muted-foreground">Build your future.</span>
             </h1>
             <p className="mt-6 max-w-lg text-base text-muted-foreground md:text-lg">
-              Nano Syllabus is an AI co-pilot that understands your textbooks, syllabus, and
-              question banks, so studying actually feels doable.
+              Nano Syllabus is an AI study companion that learns your exact syllabus, past papers,
+              and exam pattern, for any university. Clear your academics faster, so you can spend
+              your time where it counts: building your career and mastering ideas more deeply.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <a
@@ -91,34 +97,21 @@ export default function HomePage() {
                     <Star key={index} className="h-3.5 w-3.5 fill-foreground text-foreground" />
                   ))}
                 </div>
-                Loved by 10k+ students
+                Loved by serious students
               </div>
               <div className="hidden h-4 w-px bg-border sm:block" />
-              <span className="hidden sm:inline">SEE • NEB • CEE • IOE</span>
+              <span className="hidden sm:inline">Any university · any syllabus</span>
             </div>
           </div>
           <div className="relative">
-            <div className="absolute -inset-4 -z-10 rounded-[2rem] bg-gradient-to-tr from-primary/10 via-transparent to-transparent blur-2xl" />
-            <div className="overflow-hidden rounded-3xl border border-border bg-card shadow-[0_30px_80px_-30px_rgba(0,0,0,0.25)]">
-              <Image
-                src={heroImg}
-                alt="Student learning with Nano Syllabus"
-                priority
-                sizes="(min-width: 768px) 50vw, 100vw"
-                className="h-auto w-full"
-              />
-            </div>
-            <div className="absolute -bottom-4 -left-4 hidden rounded-2xl border border-border bg-background p-4 shadow-lg md:block">
-              <div className="flex items-center gap-3">
-                <div className="grid h-10 w-10 place-items-center rounded-xl bg-primary/10 text-primary">
-                  <Bot className="h-5 w-5" />
-                </div>
-                <div>
-                  <p className="text-xs text-muted-foreground">Asking…</p>
-                  <p className="text-sm">Explain Newton&apos;s 3rd law in Nepali</p>
-                </div>
-              </div>
-            </div>
+            <div className="glow glow-indigo floaty absolute left-1/2 top-1/2 -z-10 h-[26rem] w-[28rem] -translate-x-1/2 -translate-y-1/2 opacity-60" />
+            <Image
+              src={heroImg}
+              alt="Nano Syllabus AI tutor"
+              priority
+              sizes="(min-width: 768px) 55vw, 100vw"
+              className="floaty-slow h-auto w-full scale-[1.1] drop-shadow-[0_45px_70px_rgba(15,40,90,0.20)] md:scale-[1.18]"
+            />
           </div>
         </div>
       </section>
@@ -126,32 +119,32 @@ export default function HomePage() {
       <section className="border-y border-border bg-muted/30">
         <div className="container-px mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-6 py-6 text-xs uppercase tracking-[0.2em] text-muted-foreground">
           <span>Curriculum-aware</span>
-          <span>SEE • Class 10</span>
-          <span>NEB +2</span>
-          <span>IOE entrance</span>
-          <span>CEE entrance</span>
+          <span>Any syllabus</span>
+          <span>Past papers, solved</span>
+          <span>Exam-pattern aware</span>
           <span>Teacher-reviewed</span>
+          <span>Pilot · Nepal universities</span>
         </div>
       </section>
 
       <section className="container-px mx-auto max-w-7xl py-24">
-        <div className="max-w-2xl">
+        <div className="reveal-up max-w-2xl">
           <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
             Why students choose us
           </p>
           <h2 className="mt-3 text-4xl md:text-5xl">A tutor that actually knows your syllabus.</h2>
         </div>
-        <div className="mt-12 grid gap-px overflow-hidden rounded-3xl border border-border bg-border md:grid-cols-3">
+        <div className="reveal-up mt-12 grid gap-px overflow-hidden rounded-3xl border border-border bg-border md:grid-cols-3">
           {[
             {
               icon: BookOpen,
-              title: "Built on NEB & SEE",
-              body: "Trained on Nepal's official textbooks and chapter-wise notes. Answers stay relevant to your exam.",
+              title: "Knows your exact syllabus",
+              body: "Learns your course, textbooks, and chapter-wise notes, so every answer stays inside what your exam actually tests.",
             },
             {
               icon: GraduationCap,
               title: "Past papers, solved",
-              body: "10 years of question banks with step-by-step explanations in English and Nepali.",
+              body: "Years of question banks with step-by-step explanations, in the language you study in.",
             },
             {
               icon: Bot,
@@ -166,12 +159,12 @@ export default function HomePage() {
             {
               icon: CheckCircle2,
               title: "Teacher-reviewed",
-              body: "Notes co-created with top teachers across Kathmandu, Pokhara, and Biratnagar.",
+              body: "Notes and answers co-created with experienced educators, so you can trust what you study.",
             },
             {
               icon: Star,
               title: "Free to start",
-              body: "Begin with the free plan. Upgrade only when you're ready for entrance prep.",
+              body: "Begin with the free plan. Upgrade only when you're ready for exam and entrance prep.",
             },
           ].map(({ icon: Icon, title, body }) => (
             <div
@@ -188,7 +181,7 @@ export default function HomePage() {
 
       <section className="border-t border-border bg-muted/30">
         <div className="container-px mx-auto max-w-7xl py-24">
-          <div className="flex items-end justify-between gap-6">
+          <div className="reveal-up flex items-end justify-between gap-6">
             <div>
               <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
                 An ecosystem
@@ -202,19 +195,19 @@ export default function HomePage() {
               See all <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
+          <div className="reveal-up mt-12 grid gap-6 md:grid-cols-3">
             {[
               {
                 img: productStudy,
                 tag: "01 · Study",
                 title: "Study Companion",
-                body: "Your daily co-pilot for class 6 to 12. Ask, summarise, revise.",
+                body: "Your daily co-pilot from school to university. Ask, summarise, revise.",
               },
               {
                 img: productEntrance,
                 tag: "02 · Entrance",
                 title: "Entrance Preparation",
-                body: "Targeted practice for IOE, CEE, KU, and Loksewa.",
+                body: "Targeted practice for your entrance and licensing exams, on your exam pattern.",
               },
               {
                 img: productTeacher,
@@ -249,17 +242,17 @@ export default function HomePage() {
       </section>
 
       <section className="container-px mx-auto max-w-7xl py-24">
-        <div className="grid gap-10 md:grid-cols-2">
+        <div className="reveal-up grid gap-10 md:grid-cols-2">
           {[
             {
               quote:
-                "I finally understood derivatives. The AI explained it like my favourite tuition sir would.",
-              who: "Aayusha, +2 Science, Kathmandu",
+                "I used to lose whole evenings just keeping up with coursework. Now I clear it in an hour and spend the rest building real projects. That's the point: academics shouldn't cost me the time I need for my career.",
+              who: "Diwash Joshi, CSIT",
             },
             {
               quote:
-                "Solved 6 years of IOE past papers in two weeks. I cleared the entrance on first try.",
-              who: "Bibek, IOE Pulchowk",
+                "It answers straight from my TU syllabus, not some random foreign textbook. I finally study the exact thing I'm tested on, understand it deeper, and get my time back.",
+              who: "Bikesh Maharjan, Electronics Engineering, TU",
             },
           ].map((testimonial) => (
             <figure key={testimonial.who} className="rounded-3xl border border-border bg-card p-8">
@@ -276,12 +269,13 @@ export default function HomePage() {
 
       <section className="container-px mx-auto max-w-7xl pb-24">
         <div className="relative overflow-hidden rounded-3xl bg-foreground px-8 py-16 text-background md:px-16 md:py-24">
-          <div className="relative z-10 max-w-2xl">
+          <div className="reveal-up relative z-10 max-w-2xl">
             <h2 className="text-balance text-4xl md:text-6xl">
-              Ready to make studying feel light?
+              Spend less time on coursework. More on your future.
             </h2>
             <p className="mt-4 text-base text-background/70 md:text-lg">
-              Join thousands of students across Nepal already learning with Nano Syllabus.
+              Clear your academics faster with a tutor that knows your syllabus. Currently piloting
+              with universities in Nepal, and rolling out to more.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a
