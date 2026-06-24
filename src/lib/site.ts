@@ -5,8 +5,8 @@ export const siteConfig = {
   shortName: "nano syllabus",
   tagline: "The AI study companion that actually knows your syllabus.",
   description:
-    "Nano Syllabus is an AI study companion that learns your exact curriculum, past papers, and exam pattern, so you clear coursework faster and spend your time building your career and mastering ideas more deeply. Now piloting with universities in Nepal.",
-  pilotNote: "Now piloting with universities in Nepal.",
+    "Nano Syllabus is an AI study companion that learns your exact curriculum, past papers, and exam pattern, so you clear coursework faster and spend your time building your career and mastering ideas more deeply. Now piloting with universities worldwide.",
+  pilotNote: "Now piloting with universities worldwide.",
   url: "https://nanosyllabus.com",
   demoUrl: "https://calendly.com/nanosyllabus/demo",
   email: "hello@nanosyllabus.com",

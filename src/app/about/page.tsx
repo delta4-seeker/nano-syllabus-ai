@@ -6,7 +6,7 @@ import { createPageMetadata } from "@/lib/site";
 export const metadata = createPageMetadata({
   title: "About",
   description:
-    "Nano Syllabus makes academic learning fast, so students reclaim time for their careers and deeper mastery. Now piloting with universities in Nepal.",
+    "Nano Syllabus makes academic learning fast, so students reclaim time for their careers and deeper mastery. Now piloting with universities worldwide.",
   path: "/about",
 });
 
@@ -26,8 +26,8 @@ export default function AboutPage() {
             Students lose the time they need for their careers to coursework that never ends. Nano
             Syllabus flips that: an AI study companion that learns your exact syllabus and exam
             pattern, so you clear academics faster and spend your time building your career and
-            mastering ideas more deeply. We&apos;re starting with a pilot across universities in
-            Nepal, and building for students everywhere.
+            mastering ideas more deeply. We&apos;re starting with a pilot across universities
+            worldwide, and building for students everywhere.
           </>
         }
       />
@@ -72,7 +72,7 @@ export default function AboutPage() {
       <section className="container-px mx-auto max-w-7xl pb-24">
         <div className="grid gap-6 rounded-3xl border border-border bg-card p-10 md:grid-cols-4">
           {[
-            { n: "Pilot", l: "Live with Nepal universities" },
+            { n: "Pilot", l: "Live with universities worldwide" },
             { n: "Any", l: "Syllabus, any university" },
             { n: "On-course", l: "Answers stay on your exam" },
             { n: "Built", l: "For students everywhere" },
