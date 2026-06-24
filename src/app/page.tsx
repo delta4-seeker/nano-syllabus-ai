@@ -29,7 +29,7 @@ const organizationSchema = {
   url: "https://nanosyllabus.com",
   logo: "https://nanosyllabus.com/nanosyllabus-logo.png",
   description:
-    "An AI study companion that learns your exact syllabus, past papers, and exam pattern. Now piloting with universities in Nepal.",
+    "An AI study companion that learns your exact syllabus, past papers, and exam pattern. Now piloting with universities worldwide.",
   contactPoint: {
     "@type": "ContactPoint",
     email: "hello@nanosyllabus.com",
@@ -123,7 +123,7 @@ export default function HomePage() {
           <span>Past papers, solved</span>
           <span>Exam-pattern aware</span>
           <span>Teacher-reviewed</span>
-          <span>Pilot · Nepal universities</span>
+          <span>Pilot · universities worldwide</span>
         </div>
       </section>
 
@@ -251,8 +251,8 @@ export default function HomePage() {
             },
             {
               quote:
-                "It answers straight from my TU syllabus, not some random foreign textbook. I finally study the exact thing I'm tested on, understand it deeper, and get my time back.",
-              who: "Bikesh Maharjan, Electronics Engineering, TU",
+                "It answers straight from my own course syllabus, not some random generic textbook. I finally study the exact thing I'm tested on, understand it deeper, and get my time back.",
+              who: "Bikesh Maharjan, Electronics Engineering",
             },
           ].map((testimonial) => (
             <figure key={testimonial.who} className="rounded-3xl border border-border bg-card p-8">
@@ -275,7 +275,7 @@ export default function HomePage() {
             </h2>
             <p className="mt-4 text-base text-background/70 md:text-lg">
               Clear your academics faster with a tutor that knows your syllabus. Currently piloting
-              with universities in Nepal, and rolling out to more.
+              with universities worldwide, and rolling out to more.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a

@@ -59,7 +59,7 @@ export default function ProductsPage() {
       <PageHero
         eyebrow="Products"
         title="An ecosystem for learning."
-        subtitle="Nano Syllabus is starting with three products, each designed to solve a real problem for students and educators. Currently piloting with universities in Nepal."
+        subtitle="Nano Syllabus is starting with three products, each designed to solve a real problem for students and educators. Currently piloting with universities worldwide."
       />
 
       <section className="container-px mx-auto max-w-7xl pb-24">
